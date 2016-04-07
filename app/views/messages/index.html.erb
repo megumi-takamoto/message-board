@@ -1,21 +1,40 @@
-<div class="panel panel-default">
-    <div class="panel-heading">
-       メッセージ一覧
-    </div>
-
-<div class="panel-body">
-    <% @messages.each do |message| %>
-    <span class="label label-info"><%= message.name %></span>
-    <%= message.body %>
-    (<%= link_to "edit" , edit_message_path(message) %>
-         <%= link_to "destroy" , message , method: :delete, data: { confirm: '削除してもよろしいですか？' } %>
-        )
-    <br>
-    <% end %>
-    </div>
-</div>
+<div class="alert alert-success" role="alert"><strong>新規投稿</strong></div>    
 
 <% #部分テンプレートを読み込んでいる　%>
 <%= render 'form' %>
 
-</div>   
+<div class="mes_des">
+  
+  <div class="alert alert-danger" role="alert"><strong>求人募集</strong></div>      
+  
+  <% @messages.each do |message| %>
+      
+    <div class="panel panel-danger">
+      <div class="panel-heading">
+        <span class=""><%= message.title%></span>
+      </div>
+      
+      <div class="panel-body">
+        <div class="t_but"><span class="label label-default t_but2">仕事の内容</span>　<%= message.body%></div>
+        <div class="t_but"><span class="label label-default t_but2">対象年齢</span>　<%= message.age%>歳まで</div>
+        <div class="t_but"><span class="label label-default t_but2">勤務地</span>　<%= message.station%></div>
+        <div class="t_but"><span class="label label-default t_but2">投稿者</span>　<%= message.name %></div>
+        <div class="t_but"><span class="label label-default t_but2">連絡先メール</span>　<%= message.mail%></div>
+          <div class="dell"><%= link_to "編集する" , edit_message_path(message) %>　
+          <% #<%= link_to "編集する" , { :class => "label label-warning"}, edit_message_path(message) ここがうまくいきません！%>
+          <%= link_to "削除する" , message , method: :delete, data: { confirm: '削除してもよろしいですか？' } %></div>
+      </div>
+    </div>
+    
+  <% end %>
+  
+</div>
+
+
+
+
+
+
+
+
+

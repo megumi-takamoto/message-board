@@ -1,0 +1,30 @@
+.boxin {
+ margin: 50px 0;
+}
+
+.mes_des {
+margin: 10px 0;
+}
+
+.t_but {
+margin: 10px 0;
+padding: 10px 0;    
+}
+
+.t_but2 {
+padding: 8px;
+font-size: 13px; 
+}
+
+.dell {
+    text-align: right;
+}
+
+.copyright {
+    padding: 20px 0;
+    margin: 50px 0 0 0;
+    font-size: 12px;
+    color: #FFF;
+    background-color: #ccc;
+    text-align: center; 
+}

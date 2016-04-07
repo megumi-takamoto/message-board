@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MessageBoard</title>
+  <title>求人募集一覧</title>
+  <meta name="keywords" content="求人募集,掲示板,投稿,">
+  <meta name="description" content="こちは求人募集用の掲示板です。">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">Message Board</a>
-      </div>
-    </div>
-  </nav>
+    
+<div class="container">
+  <div class="page-header">
+	  <h1>求人募集掲示板　　<small>JOB Borard</small></h1>
+  </div>
+
+ 
+      
+</div>
+ 
   <div class="container">
      <% if notice %>
-        <div class="alert alert-info"
+        <div class="alert alert-info">
           <%= notice %>
         </div>
       <% end %>
   <%= yield %>
   </div>
+  
+<footer>
+	<div class="copyright">c2016 JOB Borard Inc.</div>
+</footer>
+  
 </body>
 </html>
