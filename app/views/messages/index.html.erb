@@ -20,9 +20,9 @@
         <div class="t_but"><span class="label label-default t_but2">勤務地</span>　<%= message.station%></div>
         <div class="t_but"><span class="label label-default t_but2">投稿者</span>　<%= message.name %></div>
         <div class="t_but"><span class="label label-default t_but2">連絡先メール</span>　<%= message.mail%></div>
-          <div class="dell"><%= link_to "編集する" , edit_message_path(message) %>　
-          <%= link_to "編集する" , edit_message_path(message) , :class => "label label-warning" %>
-          <%= link_to "削除する" , message , method: :delete, data: { confirm: '削除してもよろしいですか？' } %></div>
+          <div class="dell">
+          <%= link_to "編集する" , edit_message_path(message) , :class => "btn btn-danger" %>
+          <%= link_to "削除する" , message , method: :delete, data: { confirm: '削除してもよろしいですか？' } , :class => "btn btn-danger" %></div>
       </div>
     </div>
     
